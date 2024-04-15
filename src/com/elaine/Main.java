@@ -1,10 +1,10 @@
-package com.amigoscode;
+package com.elaine;
 
-import com.amigoscode.booking.CarBooking;
-import com.amigoscode.booking.CarBookingService;
-import com.amigoscode.car.Car;
-import com.amigoscode.user.User;
-import com.amigoscode.user.UserService;
+import com.elaine.booking.CarBooking;
+import com.elaine.booking.CarBookingService;
+import com.elaine.car.Car;
+import com.elaine.user.User;
+import com.elaine.user.UserService;
 
 import java.util.Scanner;
 import java.util.UUID;

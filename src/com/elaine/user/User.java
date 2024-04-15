@@ -1,4 +1,4 @@
-package com.amigoscode.user;
+package com.elaine.user;
 
 import java.util.Objects;
 import java.util.UUID;

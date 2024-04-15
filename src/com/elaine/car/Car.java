@@ -1,4 +1,4 @@
-package com.amigoscode.car;
+package com.elaine.car;
 
 import java.math.BigDecimal;
 import java.util.Objects;

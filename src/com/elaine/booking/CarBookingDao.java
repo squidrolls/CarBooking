@@ -1,4 +1,4 @@
-package com.amigoscode.booking;
+package com.elaine.booking;
 
 import java.util.UUID;
 

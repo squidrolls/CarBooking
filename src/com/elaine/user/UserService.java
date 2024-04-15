@@ -1,9 +1,9 @@
-package com.amigoscode.user;
+package com.elaine.user;
 
 import java.util.UUID;
 
 public class UserService {
-    private final UserDao userDao = new UserDao();
+    private final UserFileDataAccessService userDao = new UserFileDataAccessService();
 
     public User[] getUsers() {
         return userDao.getUsers();

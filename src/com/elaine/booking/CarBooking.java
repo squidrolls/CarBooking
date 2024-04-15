@@ -1,7 +1,7 @@
-package com.amigoscode.booking;
+package com.elaine.booking;
 
-import com.amigoscode.car.Car;
-import com.amigoscode.user.User;
+import com.elaine.car.Car;
+import com.elaine.user.User;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

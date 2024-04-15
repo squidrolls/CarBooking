@@ -1,8 +1,8 @@
-package com.amigoscode.user;
+package com.elaine.user;
 
 import java.util.UUID;
 
-public class UserDao {
+public class UserArrayDataAccessService implements UserDao{
 
     private static final User[] users;
 
@@ -13,7 +13,7 @@ public class UserDao {
         };
     }
 
-
+    @Override
     public User[] getUsers() {
         return users;
     }
