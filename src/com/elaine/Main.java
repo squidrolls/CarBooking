@@ -1,9 +1,14 @@
 package com.elaine;
 
 import com.elaine.booking.CarBooking;
+import com.elaine.booking.CarBookingDao;
 import com.elaine.booking.CarBookingService;
 import com.elaine.car.Car;
+import com.elaine.car.CarDAO;
+import com.elaine.car.CarService;
 import com.elaine.user.User;
+import com.elaine.user.UserDao;
+import com.elaine.user.UserFileDataAccessService;
 import com.elaine.user.UserService;
 
 import java.util.Scanner;
@@ -13,8 +18,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserService userService = new UserService();
-        CarBookingService carBookingService = new CarBookingService();
+        UserDao userDao = new UserFileDataAccessService();
+        UserService userService = new UserService(userDao);
+
+        CarDAO carDAO = new CarDAO();
+        CarService carService = new CarService(carDAO);
+        CarBookingDao carBookingDao = new CarBookingDao();
+        CarBookingService carBookingService = new CarBookingService(carBookingDao,carService);
 
         Scanner scanner = new Scanner(System.in);
 
