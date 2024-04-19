@@ -1,6 +1,8 @@
 package com.elaine.car;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
 
 public class CarDAO {
 
@@ -10,7 +12,7 @@ public class CarDAO {
             new Car("5678", new BigDecimal("77.00"), Brand.MERCEDES, false),
     };
 
-    public Car[] getAllCars() {
-        return CARS;
+    public List<Car> getAllCars() {
+        return Arrays.asList(CARS);
     }
 }

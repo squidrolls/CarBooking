@@ -1,8 +1,8 @@
 package com.elaine.user;
 
-import java.util.UUID;
+import java.util.List;
 
 public interface UserDao {
-    public User[] getUsers(); 
+    List<User> getUsers();
 
 }

@@ -2,27 +2,22 @@ package com.elaine.user;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
 public class UserFileDataAccessService implements UserDao{
     @Override
-    public User[] getUsers() {
-        /*
-            Size 4 because I know there are 4 entries in src/users.csv
-            If you add more rows in the file update the size of the initial array too
-        */
-        User[] users = new User[4];
+    public List<User> getUsers() {
+
         File file = new File("src/com/elaine/users.csv");
+        List<User> users = new ArrayList<>();
         try {
-            int index = 0;
             Scanner scanner = new Scanner(file);
             while(scanner.hasNext()){
                 String[] input = scanner.nextLine().trim().split(",");
-                UUID id = UUID.fromString(input[0]);
-                String name = input[1];
-                users[index] = new User(id, name);
-                index++;
+                users.add(new User(UUID.fromString(input[0]), input[1]));
             }
             return users;
         } catch (FileNotFoundException e) {

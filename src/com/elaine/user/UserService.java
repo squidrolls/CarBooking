@@ -1,5 +1,6 @@
 package com.elaine.user;
 
+import java.util.List;
 import java.util.UUID;
 
 public class UserService {
@@ -10,7 +11,7 @@ public class UserService {
     }
 
 
-    public User[] getUsers() {
+    public List<User> getUsers() {
         return userDao.getUsers();
     }
 
