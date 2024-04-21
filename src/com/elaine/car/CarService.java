@@ -3,6 +3,7 @@ package com.elaine.car;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CarService {
 
@@ -26,22 +27,8 @@ public class CarService {
     }
 
     public List<Car> getAllElectricCars() {
-        int electricCarsCount = 0;
-
         List<Car> cars = getAllCars();
-
-        if (cars.size() == 0) {
-            return Collections.emptyList();
-        }
-
-        List<Car> electricCars = new ArrayList<>();
-
-        for (Car car : cars) {
-            if (car.isElectric()) {
-                electricCars.add(car);
-            }
-        }
-
+        List<Car> electricCars = cars.stream().filter(car -> car.isElectric()).collect(Collectors.toList());
 
         return electricCars;
     }
